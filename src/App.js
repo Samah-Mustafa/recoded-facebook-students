@@ -4,6 +4,8 @@ import SignUpPage from "./SignUp";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 
+// const provider = new firebase.auth.GoogleAuthProvider();
+
 function App() {
   return (
     <Container>

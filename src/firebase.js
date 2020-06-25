@@ -1,8 +1,12 @@
-import firebase from "firebase";
+// import firebase from "firebase";
+import * as firebase from 'firebase';
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "PUT_API_KEY_HERE",
+  apiKey: "AIzaSyDPFwcO5W4cSdCIBU4zYSWd2Hsi52CLNQs",
   authDomain: "recodedfacebook.firebaseapp.com",
   databaseURL: "https://recodedfacebook.firebaseio.com",
   projectId: "recodedfacebook",
@@ -14,5 +18,13 @@ var firebaseConfig = {
 // Initialize Firebase
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
+const provider = new firebase.auth.GoogleAuthProvider();
+export const auth = firebase.auth();
+
+// export const signInWithGoogle = () => {
+//   auth.signInWithPopup(provider);
+// };
 
 export default db;
+export default auth;
+export default provider
